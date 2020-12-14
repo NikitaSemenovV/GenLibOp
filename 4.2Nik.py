@@ -196,13 +196,13 @@ fitness_max = np.array([max(gen[0]['Fitness'])])
 finish = 0
 
 
-# сходимость или прошло 500 поколений другое решение,
+# сходимость или прошло 500 поколений,
 # при первой итерации находится особь с хорошим приспособлением - алгоритм оканчивается, когда разница между функциями приспособленности больше, чем стоимость самой дешевой вещи
-def fitness_max_chech(max_fitness):
+def fitness_max_chech(max_fitn):
     result = 0
-    if len(max_fitness) > 2:
-        for n in range(len(max_fitness) - 1):
-            result = max_fitness[n] - max_fitness[n-1]
+    if len(max_fitn) > 2:
+        for n in range(len(max_fitn) - 1):
+            result = max_fitn[n] - max_fitn[n-1]
     return result
 
 
